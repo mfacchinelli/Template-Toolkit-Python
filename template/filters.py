@@ -879,7 +879,7 @@ def indent_filter_factory(context, pad=4):
             pad = " " * count
 
     def indent_filter(text=""):
-        return re.sub(r"(?m)^(?=(?s).)", lambda _: str(pad), str(text))
+        return re.sub(r"(?ms)^(?=.)", lambda _: str(pad), str(text))
     return indent_filter
 
 
